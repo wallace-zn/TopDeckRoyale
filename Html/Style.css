@@ -1,0 +1,99 @@
+/* cor do fundo */
+body {
+    background-color: #16161a; /* Cor de fundo clara */
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    color: #ffffff; /* Cor do texto */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Remove os marcadores da lista e o padding */
+.decks-meta-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* Centraliza a lista no site */
+    max-width: 90%; /* Define uma largura máxima para a lista */
+}
+  
+/* Define o layout dos itens da lista */
+.decks-meta-list li {
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna */
+    margin-bottom: 20px; /* Adiciona espaçamento entre os itens */
+}
+  
+/* Estiliza as imagens para manter um tamanho fixo de 10x10 */
+.decks-meta-list img {
+    display: block; /* Garante que a imagem seja exibida como bloco */
+    width: 450px; /* Define a largura fixa */
+    height: 400px; /* Define a altura fixa */
+    
+}
+
+  
+  
+  .navbar {
+    background-color: #1b1b20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    height: 70px;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu li {
+    position: relative;
+  }
+  
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    font-weight: 500;
+    transition: background 0.3s;
+  }
+  
+  .menu li a:hover {
+    background-color: #636374;
+    border-radius: 6px;
+  }
+  
+  /* Submenu */
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #636374;
+    list-style: none;
+    padding: 0;
+    display: none;
+    border-radius: 6px;
+    overflow: hidden;
+    min-width: 180px;
+  }
+  
+  .submenu li a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .dropdown:hover .submenu {
+    display: block;
+  }
+  
+  .submenu li a:hover {
+    background-color: #838397;
+  }
