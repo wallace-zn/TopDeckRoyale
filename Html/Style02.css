@@ -30,8 +30,6 @@ body {
     
 }
 
-  
-  
   .navbar {
     background-color: #1b1b20;
     display: flex;
@@ -96,6 +94,12 @@ body {
   
   .submenu li a:hover {
     background-color: #838397;
+  }
+  section {
+    position: absolute;
+    top: 120px;     /* distância do topo */
+    left: 50px;     /* distância da esquerda */
+    width: 400px;
   }
   
   
