@@ -9,17 +9,23 @@ body {
 
 .deck1 {
   background-color: #2a2a2e;
-  padding: 20px;
-  height: 250px; /* Ajusta a altura automaticamente */
-  display: grid; /* Define o layout como grid */
-  grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas de tamanhos iguais */
+  padding: 10px; /* Reduzindo um pouco o padding para dar mais espaço às cartas */
+  height: 250px; 
+  display: grid; 
+  /* Define 4 colunas de tamanhos iguais */
+  grid-template-columns: repeat(4, 1fr); 
+  /* Define 2 linhas de tamanhos iguais */
+  grid-template-rows: repeat(2, 1fr); 
+  /* Adiciona um pequeno espaçamento entre as cartas */
+  gap: 10px; 
 }
 
 /* Estilo para as imagens */
 .deck1 img {
- 
-  width: 100%; /* Garante que as imagens ocupem o espaço da célula */
-  height: auto; /* Mantém a proporção da imagem */
+  /* Não precisa mudar aqui, pois o grid já está cuidando da disposição. 
+     O width: 100% e height: auto garantem que preencham a célula. */
+  width: 100%; 
+  height: auto; 
 }
 
 
