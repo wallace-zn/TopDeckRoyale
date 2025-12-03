@@ -7,6 +7,22 @@ body {
     padding: 20px;
 }
 
+.deck1 {
+  background-color: #2a2a2e;
+  padding: 20px;
+  height: 250px; /* Ajusta a altura automaticamente */
+  display: grid; /* Define o layout como grid */
+  grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas de tamanhos iguais */
+}
+
+/* Estilo para as imagens */
+.deck1 img {
+ 
+  width: 100%; /* Garante que as imagens ocupem o espaço da célula */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+
 /* Remove os marcadores da lista e o padding */
 .decks-meta-list {
     list-style: none;
@@ -25,10 +41,11 @@ body {
 /* Estiliza as imagens para manter um tamanho fixo de 10x10 */
 .decks-meta-list img {
     display: block; /* Garante que a imagem seja exibida como bloco */
-    width: 450px; /* Define a largura fixa */
-    height: 400px; /* Define a altura fixa */
-    
+    width: 120px; /* Define a largura fixa */
+    height: 120px; /* Define a altura fixa */ 
 }
+
+
 
   
   
