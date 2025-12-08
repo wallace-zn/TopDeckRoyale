@@ -1,94 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TopDeckRoyale - Home</title>
-       <link rel="stylesheet" href="Style.css"> 
-      </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopDeckRoyale - Início</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
 <body>
 
-  <!-- Cabeçalho / Menu -->
-  <header>
-    <nav class="navbar">
-      <img src="./imgs/Gemini_Generated_Image_x68lohx68lohx68l.png" alt="Logo TopDeckRoyale" width="70">
-      <ul class="menu">
-  
-        <!-- ITEM PRINCIPAL (renomeado) -->
-        <li class="dropdown">
-          <a href="#">Início ▾</a>
-          <ul class="submenu">
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="quemSomos.html">Quem Somos</a></li>
-            <li><a href="reclameAqui.html">Reclame Aqui</a></li>
-          </ul>
-        </li>
-  
-        <li class="dropdown">
-          <a href="#">Decks ▾</a>
-          <ul class="submenu">
-            <li><a href="decksMetas.html">Decks Meta</a></li>
-            <li><a href="monteSeuDeck.html">Monte Seu Deck</a></li>
-            <li><a href="DecksDaComunidade.html">Deck da Comunidade</a></li>
-          </ul>
-        </li>
-  
-        <li><a href="https://clashroyale.fandom.com/pt-br/wiki/P%C3%A1gina_principal">Wiki</a></li>
-  
-      </ul>
-    </nav>
+  <nav class="navbar">
+    <img src="./imgs/Gemini_Generated_Image_x68lohx68lohx68l.png" alt="Logo TopDeckRoyale" width="70">
+    <ul class="menu">
+      <li class="dropdown">
+        <a href="#">Início ▾</a>
+        <ul class="submenu">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="quemSomos.html">Quem Somos</a></li>
+          <li><a href="reclameAqui.html">Reclame Aqui</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Decks ▾</a>
+        <ul class="submenu">
+          <li><a href="decksMetas.html">Decks Meta</a></li>
+          <li><a href="monteSeuDeck.html">Monte Seu Deck</a></li>
+          <li><a href="DecksDaComunidade.html">Deck da Comunidade</a></li>
+        </ul>
+      </li>
+      <li><a href="https://clashroyale.fandom.com/pt-br/wiki/P%C3%A1gina_principal">Wiki</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+      <div class="hero-content">
+          <h1>TopDeckRoyale</h1>
+          <p>Os melhores decks do meta atualizados para você subir de arena.</p>
+          <a href="decksMetas.html" class="btn-hero">Ver Todos os Decks</a>
+      </div>
   </header>
-  <h1>TopDeckRoyale</h1>
-  <!-- Seção Decks Meta -->
-  <section id="decks-meta">
-    <h2>Decks Meta da Temporada</h2>
-    <ul class="decks-meta-list">
-      <li>
-        <img src="./imgs/Image_20251007_154057_770.jpeg" alt="Deck 1">
-        Deck 1 - Taxa de vitória 58%
-      </li>
-      <li>
-        <img src="./imgs/Image_20251007_154057_854.jpeg" alt="Deck 2">
-        Deck 2 - Taxa de vitória 55%
-      </li>
-      <li>
-        <img src="./imgs/Image_20251007_154057_900.jpeg" alt="Deck 3">
-        Deck 3 - Taxa de vitória 60%
-      </li>
-    </ul>
-  </section>
 
-  <!-- Seção Comunidade -->
-  <section id="comunidade">
-    <h2>Decks da Comunidade</h2>
-    <p>Explore decks criados por outros jogadores ou envie o seu.</p>
-    <ul>
-      <li>Deck do Jogador A</li>
-      <li>Deck do Jogador B</li>
-      <li>Deck do Jogador C</li>
-    </ul>
-    <a href="DecksDaComunidade.html">Explorar Comunidade</a>
-    <a href="monteSeuDeck.html">Enviar Meu Deck</a>
-  </section>
+  <div class="container">
+      <h2 style="text-align: center; margin-bottom: 40px; color: #ffcc00;">🔥 Decks em Destaque da Temporada</h2>
 
-  <!-- Seção Notícias -->
-  <section id="noticias">
-    <h2>Notas das Atualizações e Notícias</h2>
-    <article>
-      <h3>Atualização de Outubro</h3>
-      <p>Veja as mudanças mais recentes de balanceamento e novidades do jogo.</p>
-    </article>
-    <article>
-      <h3>Evento Especial</h3>
-      <p>Participe do torneio da comunidade nesta temporada.</p>
-    </article>
-    <a href="https://clashroyale.fandom.com/wiki/Clash_Royale_Wiki">Ler todas as notícias</a>
-  </section>
+      <div class="home-deck-wrapper">
+          <h3 class="deck-title">Ciclo Rápido 2.6</h3>
+          <div class="deck-grid">
+            <a href="#" class="card-slot"><img src="./cards-150/evos/knight-ev1.png"><div class="card-tooltip"><strong>Cavaleiro</strong>Elixir: 3</div></a>
+            <a href="#" class="card-slot"><img src="./cards-150/evos/Cannon.png"><div class="card-tooltip"><strong>Canhão</strong>Elixir: 3</div></a>
+            <a href="#" class="card-slot"><img src="./cards-150/archers.png"><div class="card-tooltip"><strong>Arqueiras</strong>Elixir: 3</div></a>
+            <a href="#" class="card-slot info-left"><img src="./cards-150/the-log.png"><div class="card-tooltip"><strong>O Tronco</strong>Elixir: 2</div></a>
+            
+            <a href="#" class="card-slot"><img src="./cards-150/ice-spirit.png"><div class="card-tooltip"><strong>Espírito de Gelo</strong>Elixir: 1</div></a>
+            <a href="#" class="card-slot"><img src="./cards-150/musketeer.png"><div class="card-tooltip"><strong>Mosqueteira</strong>Elixir: 4</div></a>
+            <a href="#" class="card-slot"><img src="./cards-150/ice-golem.png"><div class="card-tooltip"><strong>Golem de Gelo</strong>Elixir: 2</div></a>
+            <a href="#" class="card-slot info-left"><img src="./cards-150/fireball.png"><div class="card-tooltip"><strong>Bola de Fogo</strong>Elixir: 4</div></a>
+          </div>
+          <div class="deck-stats">🏆 Taxa de Vitória: <strong>58%</strong> | Custo: 2.8</div>
+      </div>
 
-  <!-- Rodapé -->
+      <div class="home-deck-wrapper">
+          <h3 class="deck-title">Golem Beatdown</h3>
+          <div class="deck-grid">
+            <a href="#" class="card-slot"><img src="./cards-150/evos/LumberjackCardEvolution.webp"><div class="card-tooltip"><strong>Lenhador</strong>Elixir: 4</div></a>
+            <a href="#" class="card-slot"><img src="./cards-150/evos/BabyD.png"><div class="card-tooltip"><strong>Bebê Dragão</strong>Elixir: 4</div></a>
+            <a href="#" class="card-slot"><img src="./cards-150/golem.png"><div class="card-tooltip"><strong>Golem</strong>Elixir: 8</div></a>
+            <a href="#" class="card-slot info-left"><img src="./cards-150/poison.png"><div class="card-tooltip"><strong>Veneno</strong>Elixir: 4</div></a>
+            
+            <a href="#" class="card-slot"><img src="./cards-150/tornado.png"><div class="card-tooltip"><strong>Tornado</strong>Elixir: 3</div></a>
+            <a href="#" class="card-slot"><img src="./cards-150/mega-minion.png"><div class="card-tooltip"><strong>Mega Servo</strong>Elixir: 3</div></a>
+            <a href="#" class="card-slot"><img src="./cards-150/night-witch.png"><div class="card-tooltip"><strong>Bruxa Sombria</strong>Elixir: 4</div></a>
+            <a href="#" class="card-slot info-left"><img src="./cards-150/barbarian-barrel.png"><div class="card-tooltip"><strong>Barril</strong>Elixir: 2</div></a>
+          </div>
+          <div class="deck-stats">🏆 Taxa de Vitória: <strong>55%</strong> | Custo: 4.3</div>
+      </div>
+
+      <div class="home-deck-wrapper">
+        <h3 class="deck-title">X-Besta Controle</h3>
+        <div class="deck-grid">
+            <a href="#" class="card-slot"><img src="./cards-150/evos/knight-ev1.png"><div class="card-tooltip"><strong>Cavaleiro</strong>Elixir: 3</div></a>
+            <a href="#" class="card-slot"><img src="./cards-150/evos/archers-ev1.png"><div class="card-tooltip"><strong>Arqueiras</strong>Elixir: 3</div></a>
+            <a href="#" class="card-slot"><img src="./cards-150/x-bow.png"><div class="card-tooltip"><strong>X-Besta</strong>Elixir: 6</div></a>
+            <a href="#" class="card-slot info-left"><img src="./cards-150/the-log.png"><div class="card-tooltip"><strong>O Tronco</strong>Elixir: 2</div></a>
+
+            <a href="#" class="card-slot"><img src="./cards-150/ice-spirit.png"><div class="card-tooltip"><strong>Espírito de Gelo</strong>Elixir: 1</div></a>
+            <a href="#" class="card-slot"><img src="./cards-150/tesla.png"><div class="card-tooltip"><strong>Tesla</strong>Elixir: 4</div></a>
+            <a href="#" class="card-slot"><img src="./cards-150/fireball.png"><div class="card-tooltip"><strong>Bola de Fogo</strong>Elixir: 4</div></a>
+            <a href="#" class="card-slot info-left"><img src="./cards-150/tornado.png"><div class="card-tooltip"><strong>Tornado</strong>Elixir: 3</div></a>
+        </div>
+        <div class="deck-stats">🏆 Taxa de Vitória: <strong>60%</strong> | Custo: 3.1</div>
+    </div>
+
+  </div>
+
   <footer>
     <p>© 2025 TopDeckRoyale. Todos os direitos reservados.</p>
-    <p>Este site não é afiliado à Supercell.</p>
+    <p style="font-size: 0.8rem; color: #555;">Este site não é afiliado à Supercell.</p>
   </footer>
 
 </body>

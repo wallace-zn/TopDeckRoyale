@@ -1,76 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TopDeckRoyale - Decks do Meta</title>
     <link rel="stylesheet" href="Style.css">
+    <script src="JavaScript.js" defer></script>
 </head>
-  <body>
+<body>
+
     <nav class="navbar">
-      <img src="./imgs/Gemini_Generated_Image_x68lohx68lohx68l.png" alt="Logo TopDeckRoyale" width="70">
-      <ul class="menu">
-  
-        <!-- ITEM PRINCIPAL (renomeado) -->
-        <li class="dropdown">
-          <a href="#">Início ▾</a>
-          <ul class="submenu">
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="quemSomos.html">Quem Somos</a></li>
-            <li><a href="reclameAqui.html">Reclame Aqui</a></li>
-          </ul>
-        </li>
-  
-        <li class="dropdown">
-          <a href="#">Decks ▾</a>
-          <ul class="submenu">
-            <li><a href="decksMetas.html">Decks Meta</a></li>
-            <li><a href="monteSeuDeck.html">Monte Seu Deck</a></li>
-            <li><a href="DecksDaComunidade.html">Deck da Comunidade</a></li>
-          </ul>
-        </li>
-  
-        <li><a href="https://clashroyale.fandom.com/pt-br/wiki/P%C3%A1gina_principal">Wiki</a></li>
-  
-      </ul>
+        <img src="./imgs/Gemini_Generated_Image_x68lohx68lohx68l.png" alt="Logo TopDeckRoyale" width="70">
+        <ul class="menu">
+            <li class="dropdown">
+                <a href="#">Início ▾</a>
+                <ul class="submenu">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="quemSomos.html">Quem Somos</a></li>
+                    <li><a href="reclameAqui.html">Reclame Aqui</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Decks ▾</a>
+                <ul class="submenu">
+                    <li><a href="decksMetas.html">Decks Meta</a></li>
+                    <li><a href="monteSeuDeck.html">Monte Seu Deck</a></li>
+                    <li><a href="DecksDaComunidade.html">Deck da Comunidade</a></li>
+                </ul>
+            </li>
+            <li><a href="https://clashroyale.fandom.com/pt-br/wiki/P%C3%A1gina_principal">Wiki</a></li>
+        </ul>
     </nav>
 
-<section id="decks-meta" class="decks-meta-list">
-    <title>DM - Decks do Meta</title>
-    <h1> Decks do Meta </h1>
-<div class="deck">
-    <h3>Deck de Ciclo Rápido</h3>
-    <img src="./imgs/Image_20251007_154057_716.jpeg" alt="Deck 1">
-    <p>Custo médio: 2.8 Elixir</p>
-    <p>Cartas: Cavaleiro, Arqueiras, Canhão, Tronco, Espírito de Gelo, Mosqueteira, Golem de Gelo, Fireball.</p>
-</div>
-<div class="deck">
-    <h3>Deck de Golem</h3>
-    <img src="./imgs/Image_20251007_154057_747.jpeg" alt="Deck 2">
-    <p>Custo médio: 4.3 Elixir</p>
-    <p>Cartas: Golem, Baby Dragon, Veneno, Tornado, Lenhador, Mega Servo, Bruxa Sombria, Barril de Bárbaros.</p>
-</div>
-<div class="deck">
-    <h3>Deck de X-Besta Defesa</h3>
-    <img src="./imgs/Image_20251007_154057_900.jpeg" alt="Deck 3">
-    <p><strong>Custo médio:</strong> 3.1 Elixir</p>
-    <p><strong>Cartas:</strong> X-Besta, Cavaleiro, Tronco, Espírito de Gelo, Tesla, Arqueiras, Bola de Fogo, Tornosado.</p>
-  </div>
+    <header class="hero-meta">
+        <h1>Decks do Meta</h1>
+        <p>As melhores combinações para vencer na temporada atual.</p>
+    </header>
 
-<div class="deck">
-    <h3>Deck de LavaLoon</h3>
-    <img src="./imgs/Image_20251007_154057_788.jpeg" alt="Deck 4">
-    <p><strong>Custo médio:</strong> 4.3 Elixir</p>
-    <p><strong>Cartas:</strong> Lava Hound, Balão, Mega Minion, Guardas, Mineiro, Bola de Fogo, Zap, Máquina Voadora.</p>
-  </div>
+    <div class="container">
+        
+        <div class="meta-deck-box">
+            <div class="deck-header-info">
+                <h3>Ciclo Rápido 2.6</h3>
+                <span class="elixir-badge">Médio: 2.8</span>
+            </div>
+            
+            <div class="deck-grid">
+                <a href="#" class="card-slot"><img src="./cards-150/evos/knight-ev1.png"><div class="card-tooltip"><strong>Cavaleiro</strong>Elixir: 3</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/evos/Cannon.png"><div class="card-tooltip"><strong>Canhão</strong>Elixir: 3</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/archers.png"><div class="card-tooltip"><strong>Arqueiras</strong>Elixir: 3</div></a>
+                <a href="#" class="card-slot info-left"><img src="./cards-150/the-log.png"><div class="card-tooltip"><strong>O Tronco</strong>Elixir: 2</div></a>
+                
+                <a href="#" class="card-slot"><img src="./cards-150/ice-spirit.png"><div class="card-tooltip"><strong>Espírito de Gelo</strong>Elixir: 1</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/musketeer.png"><div class="card-tooltip"><strong>Mosqueteira</strong>Elixir: 4</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/ice-golem.png"><div class="card-tooltip"><strong>Golem de Gelo</strong>Elixir: 2</div></a>
+                <a href="#" class="card-slot info-left"><img src="./cards-150/fireball.png"><div class="card-tooltip"><strong>Bola de Fogo</strong>Elixir: 4</div></a>
+            </div>
+            
+            <p class="deck-desc"><strong>Cartas:</strong> Cavaleiro, Arqueiras, Canhão, Tronco, Espírito de Gelo, Mosqueteira, Golem de Gelo, Fireball.</p>
+        </div>
 
-<div class="deck">
-    <h3>Deck de Bridge Spam</h3>
-    <img src="./imgs/Image_20251007_154057_854.jpeg" alt="Deck 5">
-    <p><strong>Custo médio:</strong> 3.5 Elixir</p>
-    <p><strong>Cartas:</strong> Bandida, Fantasma Real, P.E.K.K.A, Arqueiro Mágico, Veneno, Zap, Battle Ram, Eletro Mago.</p>
-</div>
-</section>
+        <div class="meta-deck-box">
+            <div class="deck-header-info">
+                <h3>Golem Beatdown</h3>
+                <span class="elixir-badge">Médio: 4.3</span>
+            </div>
+
+            <div class="deck-grid">
+                <a href="#" class="card-slot"><img src="./cards-150/evos/LumberjackCardEvolution.webp"><div class="card-tooltip"><strong>Lenhador</strong>Elixir: 4</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/evos/BabyD.png"><div class="card-tooltip"><strong>Bebê Dragão</strong>Elixir: 4</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/golem.png"><div class="card-tooltip"><strong>Golem</strong>Elixir: 8</div></a>
+                <a href="#" class="card-slot info-left"><img src="./cards-150/poison.png"><div class="card-tooltip"><strong>Veneno</strong>Elixir: 4</div></a>
+                
+                <a href="#" class="card-slot"><img src="./cards-150/tornado.png"><div class="card-tooltip"><strong>Tornado</strong>Elixir: 3</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/mega-minion.png"><div class="card-tooltip"><strong>Mega Servo</strong>Elixir: 3</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/night-witch.png"><div class="card-tooltip"><strong>Bruxa Sombria</strong>Elixir: 4</div></a>
+                <a href="#" class="card-slot info-left"><img src="./cards-150/barbarian-barrel.png"><div class="card-tooltip"><strong>Barril de Bárbaros</strong>Elixir: 2</div></a>
+            </div>
+
+            <p class="deck-desc"><strong>Cartas:</strong> Golem, Baby Dragon, Veneno, Tornado, Lenhador, Mega Servo, Bruxa Sombria, Barril.</p>
+        </div>
+
+        <div class="meta-deck-box">
+            <div class="deck-header-info">
+                <h3>X-Besta Control</h3>
+                <span class="elixir-badge">Médio: 3.1</span>
+            </div>
+            
+            <div class="deck-grid">
+                <a href="#" class="card-slot"><img src="./cards-150/evos/knight-ev1.png"><div class="card-tooltip"><strong>Cavaleiro</strong>Elixir: 3</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/evos/archers-ev1.png"><div class="card-tooltip"><strong>Arqueiras</strong>Elixir: 3</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/x-bow.png"><div class="card-tooltip"><strong>X-Besta</strong>Elixir: 6</div></a>
+                <a href="#" class="card-slot info-left"><img src="./cards-150/the-log.png"><div class="card-tooltip"><strong>O Tronco</strong>Elixir: 2</div></a>
+
+                <a href="#" class="card-slot"><img src="./cards-150/ice-spirit.png"><div class="card-tooltip"><strong>Espírito de Gelo</strong>Elixir: 1</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/tesla.png"><div class="card-tooltip"><strong>Tesla</strong>Elixir: 4</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/fireball.png"><div class="card-tooltip"><strong>Bola de Fogo</strong>Elixir: 4</div></a>
+                <a href="#" class="card-slot info-left"><img src="./cards-150/tornado.png"><div class="card-tooltip"><strong>Tornado</strong>Elixir: 3</div></a>
+            </div>
+            
+            <p class="deck-desc"><strong>Cartas:</strong> X-Besta, Cavaleiro, Tronco, Espírito de Gelo, Tesla, Arqueiras, Bola de Fogo, Tornado.</p>
+        </div>
+
+        <div class="meta-deck-box">
+            <div class="deck-header-info">
+                <h3>LavaLoon</h3>
+                <span class="elixir-badge">Médio: 4.3</span>
+            </div>
+
+            <div class="deck-grid">
+                <a href="#" class="card-slot"><img src="./cards-150/evos/ZapCardEvolution.webp"><div class="card-tooltip"><strong>Zap</strong>Elixir: 2</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/evos/royal-recruits-ev1.png"><div class="card-tooltip"><strong>Recrutas Reais</strong>Elixir: 7</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/lava-hound.png"><div class="card-tooltip"><strong>Lava Hound</strong>Elixir: 7</div></a>
+                <a href="#" class="card-slot info-left"><img src="./cards-150/balloon.png"><div class="card-tooltip"><strong>Balão</strong>Elixir: 5</div></a>
+
+                <a href="#" class="card-slot"><img src="./cards-150/mega-minion.png"><div class="card-tooltip"><strong>Mega Servo</strong>Elixir: 3</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/miner.png"><div class="card-tooltip"><strong>Mineiro</strong>Elixir: 3</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/fireball.png"><div class="card-tooltip"><strong>Bola de Fogo</strong>Elixir: 4</div></a>
+                <a href="#" class="card-slot info-left"><img src="./cards-150/flying-machine.png"><div class="card-tooltip"><strong>Máquina Voadora</strong>Elixir: 4</div></a>
+            </div>
+            
+            <p class="deck-desc"><strong>Cartas:</strong> Lava Hound, Balão, Mega Minion, Guardas, Mineiro, Bola de Fogo, Zap, Máquina Voadora.</p>
+        </div>
+
+        <div class="meta-deck-box">
+            <div class="deck-header-info">
+                <h3>Bridge Spam Pekka</h3>
+                <span class="elixir-badge">Médio: 3.5</span>
+            </div>
+
+            <div class="deck-grid">
+                <a href="#" class="card-slot"><img src="./cards-150/evos/pekka-ev1.png"><div class="card-tooltip"><strong>P.E.K.K.A</strong>Elixir: 7</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/evos/royal-ghost-ev1.png"><div class="card-tooltip"><strong>Fantasma Real</strong>Elixir: 3</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/bandit.png"><div class="card-tooltip"><strong>Bandida</strong>Elixir: 3</div></a>
+                <a href="#" class="card-slot info-left"><img src="./cards-150/electro-wizard.png"><div class="card-tooltip"><strong>Mago Elétrico</strong>Elixir: 4</div></a>
+
+                <a href="#" class="card-slot"><img src="./cards-150/battle-ram.png"><div class="card-tooltip"><strong>Aríete de Batalha</strong>Elixir: 4</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/magic-archer.png"><div class="card-tooltip"><strong>Arqueiro Mágico</strong>Elixir: 4</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/poison.png"><div class="card-tooltip"><strong>Veneno</strong>Elixir: 4</div></a>
+                <a href="#" class="card-slot info-left"><img src="./cards-150/zap.png"><div class="card-tooltip"><strong>Zap</strong>Elixir: 2</div></a>
+            </div>
+            
+            <p class="deck-desc"><strong>Cartas:</strong> Bandida, Fantasma Real, P.E.K.K.A, Arqueiro Mágico, Veneno, Zap, Battle Ram, Eletro Mago.</p>
+        </div>
+
+    </div>
+
 </body>
-
 </html>
