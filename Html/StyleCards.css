@@ -1,103 +1,58 @@
-.card {
-    display: flex;
-    background: #111;
-    padding: 20px;
-    border-radius: 12px;
-    color: white;
-  }
-  
-  .icon {
-    width: 120px;
-    margin-right: 20px;
-  }
-  
-  .stats p {
-    margin: 0;
-  }
-  
-  .decks {
-    margin-top: 20px;
-  }
-  
-  .deck img {
-    width: 300px;
-    margin-right: 10px;
-  }
-  /* cor do fundo */
-body {
-    background-color: #16161a; /* Cor de fundo clara */
-    font-family: Arial, sans-serif; /* Define a fonte padrão */
-    color: #ffffff; /* Cor do texto */
+/* =========================================
+   1. CONFIGURAÇÕES GERAIS (Igual ao site todo)
+   ========================================= */
+   body {
+    background-color: #16161a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
     margin: 0;
     padding: 20px;
+    padding-top: 0; /* Navbar cuida do topo */
 }
 
-/* Remove os marcadores da lista e o padding */
-.decks-meta-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto; /* Centraliza a lista no site */
-    max-width: 90%; /* Define uma largura máxima para a lista */
-}
-  
-/* Define o layout dos itens da lista */
-.decks-meta-list li {
-    display: flex;
-    flex-direction: column; /* Organiza os itens em coluna */
-    margin-bottom: 20px; /* Adiciona espaçamento entre os itens */
-}
-  
-/* Estiliza as imagens para manter um tamanho fixo de 10x10 */
-.decks-meta-list img {
-    display: block; /* Garante que a imagem seja exibida como bloco */
-    width: 450px; /* Define a largura fixa */
-    height: 400px; /* Define a altura fixa */
-    
-}
-
-  
-  
-  .navbar {
+/* =========================================
+   2. NAVBAR (Copiada para manter padrão)
+   ========================================= */
+.navbar {
     background-color: #1b1b20;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 80px;
+    padding: 0 5%;
     height: 70px;
-  }
-  
-  .logo {
-    color: white;
-    font-size: 22px;
-    font-weight: bold;
-  }
-  
-  .menu {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    margin-bottom: 40px; /* Espaço para o conteúdo não colar */
+    /* Removemos margin-left/right negativos se houver */
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.menu {
     list-style: none;
     display: flex;
     align-items: center;
-  }
-  
-  .menu li {
-    position: relative;
-  }
-  
-  .menu li a {
+    margin: 0;
+    padding: 0;
+}
+
+.menu li { position: relative; }
+
+.menu li a {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
     display: block;
     font-weight: 500;
     transition: background 0.3s;
-  }
-  
-  .menu li a:hover {
+}
+
+.menu li a:hover {
     background-color: #636374;
     border-radius: 6px;
-  }
-  
-  /* Submenu */
-  .submenu {
+}
+
+/* Submenu */
+.submenu {
     position: absolute;
     top: 100%;
     left: 0;
@@ -106,21 +61,158 @@ body {
     padding: 0;
     display: none;
     border-radius: 6px;
-    overflow: hidden;
     min-width: 180px;
-  }
-  
-  .submenu li a {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-  
-  .dropdown:hover .submenu {
-    display: block;
-  }
-  
-  .submenu li a:hover {
-    background-color: #838397;
-  }
-  
-  
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+.submenu li a { padding: 12px 20px; font-size: 14px; }
+.dropdown:hover .submenu { display: block; }
+.submenu li a:hover { background-color: #838397; }
+
+
+/* =========================================
+   3. PERFIL DA CARTA (Card Principal)
+   ========================================= */
+.card {
+    background-color: #232329; /* Fundo cinza escuro */
+    border-radius: 15px;
+    padding: 40px;
+    margin: 0 auto 50px auto;
+    max-width: 900px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start; /* Alinha no topo */
+    border: 1px solid #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Imagem da Carta (Ícone Grande) */
+.icon {
+    width: 180px; /* Um pouco maior */
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+    transition: transform 0.3s;
+}
+
+.icon:hover {
+    transform: scale(1.05) rotate(-5deg);
+}
+
+/* Informações de Texto */
+.info {
+    flex: 1; /* Ocupa o resto do espaço */
+}
+
+.info h1 {
+    margin-top: 0;
+    color: #ffcc00; /* Dourado */
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.info p {
+    color: #aaa;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+/* Grid de Estatísticas */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    background-color: #1a1a1d;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #444;
+}
+
+.stats p {
+    margin: 0;
+    color: #fff;
+    font-style: normal;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    padding: 5px 0;
+    border-bottom: 1px solid #333;
+}
+
+.stats p:last-child {
+    border-bottom: none;
+}
+
+/* =========================================
+   4. SEÇÃO "MELHORES DECKS"
+   ========================================= */
+h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    border-bottom: 2px solid #ffcc00;
+    display: inline-block;
+    padding-bottom: 10px;
+    /* Centralizar o titulo na tela */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.decks {
+    max-width: 1100px;
+    margin: 0 auto 50px auto;
+}
+
+.deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* As imagens dos decks (prints) */
+.deck img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    border: 2px solid #444;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.deck img:hover {
+    transform: translateY(-5px);
+    border-color: #ffcc00;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* =========================================
+   5. RESPONSIVIDADE (Celular)
+   ========================================= */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column; /* Um embaixo do outro */
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .info {
+        width: 100%;
+    }
+
+    .stats {
+        text-align: left; /* Stats ficam alinhados a esquerda mesmo no mobile */
+    }
+    
+    .navbar {
+        padding: 0 20px;
+    }
+}
