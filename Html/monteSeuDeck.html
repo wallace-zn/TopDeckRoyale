@@ -3,80 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monte seu deck</title>
+    <title>Monte seu Deck - TopDeckRoyale</title>
     <link rel="stylesheet" href="Style.css">
+    <script src="JavaScript.js" defer></script>
 </head>
 <body>
+
     <nav class="navbar">
         <img src="./imgs/Gemini_Generated_Image_x68lohx68lohx68l.png" alt="Logo TopDeckRoyale" width="70">
         <ul class="menu">
-    
-          <!-- ITEM PRINCIPAL (renomeado) -->
-          <li class="dropdown">
-            <a href="#">Início ▾</a>
-            <ul class="submenu">
-              <li><a href="Home.html">Home</a></li>
-              <li><a href="quemSomos.html">Quem Somos</a></li>
-              <li><a href="reclameAqui.html">Reclame Aqui</a></li>
-            </ul>
-          </li>
-    
-          <li class="dropdown">
-            <a href="#">Decks ▾</a>
-            <ul class="submenu">
-              <li><a href="decksMetas.html">Decks Meta</a></li>
-              <li><a href="monteSeuDeck.html">Monte Seu Deck</a></li>
-              <li><a href="DecksDaComunidade.html">Deck da Comunidade</a></li>
-            </ul>
-          </li>
-    
-          <li><a href="https://clashroyale.fandom.com/pt-br/wiki/P%C3%A1gina_principal">Wiki</a></li>
-    
+            <li class="dropdown">
+                <a href="#">Início ▾</a>
+                <ul class="submenu">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="quemSomos.html">Quem Somos</a></li>
+                    <li><a href="reclameAqui.html">Reclame Aqui</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Decks ▾</a>
+                <ul class="submenu">
+                    <li><a href="decksMetas.html">Decks Meta</a></li>
+                    <li><a href="monteSeuDeck.html">Monte Seu Deck</a></li>
+                    <li><a href="DecksDaComunidade.html">Deck da Comunidade</a></li>
+                </ul>
+            </li>
+            <li><a href="https://clashroyale.fandom.com/pt-br/wiki/P%C3%A1gina_principal">Wiki</a></li>
         </ul>
-      </nav>
+    </nav>
 
-    <h1>Crie decks e veja os decks que você já criou</h1>
-    <p>Seus decks</p>
-    <p>Crie novos decks</p>
+    <header class="hero-builder">
+        <h1>Laboratório de Decks</h1>
+        <p style="color: #ddd;">Escolha 8 cartas e verifique o custo de elixir.</p>
+    </header>
 
-    
-    <div class="main-container">
-
-        <div class="top-nav-row">
-            <div class="nav-button"></div>
-            <div class="nav-button"></div>
-            <div class="nav-button"></div>
-            <div class="nav-button"></div>
-            <div class="nav-button selected"></div>
-            <div class="nav-button reverse"></div>
-            <div class="nav-button decks"></div>
-        </div>
-    
-        <div class="content-grid">
-            <div class="card-slot highlight">
-                <div class="shield-icon"></div>
-            </div>
-            <div class="card-slot"></div>
-            <div class="card-slot"></div>
-            <div class="card-slot"></div>
-            <div class="card-slot"></div>
-            <div class="card-slot"></div>
-            <div class="card-slot"></div>
-            <div class="card-slot"></div>
-        </div>
-    
-        <div class="bottom-bar">
-            <div class="elixir-bar">
-                <div class="elixir-icon"></div>
-                <span class="elixir-value"></span>
-            </div>
-            <div class="bottom-icons">
-                <div class="bottom-icon decks-icon"></div>
-                <div class="bottom-icon search-icon"></div>
-                <div class="bottom-icon menu-icon"></div>
+    <div class="builder-interface">
+        
+        <div class="deck-slots-area">
+            <div class="slots-grid">
+                <div class="empty-slot" onclick="removeCard(0)"><span class="slot-placeholder">1</span><img src="" alt=""></div>
+                <div class="empty-slot" onclick="removeCard(1)"><span class="slot-placeholder">2</span><img src="" alt=""></div>
+                <div class="empty-slot" onclick="removeCard(2)"><span class="slot-placeholder">3</span><img src="" alt=""></div>
+                <div class="empty-slot" onclick="removeCard(3)"><span class="slot-placeholder">4</span><img src="" alt=""></div>
+                <div class="empty-slot" onclick="removeCard(4)"><span class="slot-placeholder">5</span><img src="" alt=""></div>
+                <div class="empty-slot" onclick="removeCard(5)"><span class="slot-placeholder">6</span><img src="" alt=""></div>
+                <div class="empty-slot" onclick="removeCard(6)"><span class="slot-placeholder">7</span><img src="" alt=""></div>
+                <div class="empty-slot" onclick="removeCard(7)"><span class="slot-placeholder">8</span><img src="" alt=""></div>
             </div>
         </div>
-    
+
+        <div class="stats-bar">
+            <div class="elixir-display">
+                <div class="elixir-drop"></div>
+                Média de Elixir: <span id="avg-elixir">0.0</span>
+            </div>
+            <button class="btn-reset" onclick="resetDeck()">Limpar Deck</button>
+        </div>
+
+        <div class="collection-area">
+            <h3>Toque nas cartas para adicionar</h3>
+            <div class="collection-grid">
+                <div class="collection-card" onclick="addCard(this, './cards-150/evos/knight-ev1.png', 3)">
+                    <img src="./cards-150/evos/knight-ev1.png" alt="Cavaleiro">
+                </div>
+                
+                <div class="collection-card" onclick="addCard(this, './cards-150/evos/Cannon.png', 3)">
+                    <img src="./cards-150/evos/Cannon.png" alt="Canhão">
+                </div>
+
+                <div class="collection-card" onclick="addCard(this, './cards-150/archers.png', 3)">
+                    <img src="./cards-150/archers.png" alt="Arqueiras">
+                </div>
+
+                <div class="collection-card" onclick="addCard(this, './cards-150/the-log.png', 2)">
+                    <img src="./cards-150/the-log.png" alt="Tronco">
+                </div>
+
+                <div class="collection-card" onclick="addCard(this, './cards-150/ice-spirit.png', 1)">
+                    <img src="./cards-150/ice-spirit.png" alt="Espirito Gelo">
+                </div>
+
+                <div class="collection-card" onclick="addCard(this, './cards-150/musketeer.png', 4)">
+                    <img src="./cards-150/musketeer.png" alt="Mosqueteira">
+                </div>
+
+                <div class="collection-card" onclick="addCard(this, './cards-150/fireball.png', 4)">
+                    <img src="./cards-150/fireball.png" alt="Bola de Fogo">
+                </div>
+
+                <div class="collection-card" onclick="addCard(this, './cards-150/golem.png', 8)">
+                    <img src="./cards-150/golem.png" alt="Golem">
+                </div>
+
+                <div class="collection-card" onclick="addCard(this, './cards-150/evos/BabyD.png', 4)">
+                    <img src="./cards-150/evos/BabyD.png" alt="Baby Dragon">
+                </div>
+
+                <div class="collection-card" onclick="addCard(this, './cards-150/evos/LumberjackCardEvolution.webp', 4)">
+                    <img src="./cards-150/evos/LumberjackCardEvolution.webp" alt="Lenhador">
+                </div>
+
+                <div class="collection-card" onclick="addCard(this, './cards-150/evos/pekka-ev1.png', 7)">
+                    <img src="./cards-150/evos/pekka-ev1.png" alt="Pekka">
+                </div>
+
+                 <div class="collection-card" onclick="addCard(this, './cards-150/evos/royal-ghost-ev1.png', 3)">
+                    <img src="./cards-150/evos/royal-ghost-ev1.png" alt="Fantasma">
+                </div>
+                 <div class="collection-card" onclick="addCard(this, './cards-150/bandit.png', 3)">
+                    <img src="./cards-150/bandit.png" alt="Bandida">
+                </div>
+                 <div class="collection-card" onclick="addCard(this, './cards-150/electro-wizard.png', 4)">
+                    <img src="./cards-150/electro-wizard.png" alt="Mago Eletrico">
+                </div>
+                 <div class="collection-card" onclick="addCard(this, './cards-150/magic-archer.png', 4)">
+                    <img src="./cards-150/magic-archer.png" alt="Arqueiro Magico">
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script>
+        // Estado do Deck (Lista de custos de elixir das cartas selecionadas)
+        let currentDeckElixir = [];
+        let cardsInDeck = 0;
+
+        function addCard(element, imageSrc, elixirCost) {
+            // Se o deck estiver cheio (8 cartas), não faz nada
+            if (cardsInDeck >= 8) {
+                alert("O deck já está cheio! Remova uma carta clicando nela.");
+                return;
+            }
+
+            // Se a carta já estiver usada (tem a classe 'used'), não faz nada
+            if (element.classList.contains('used')) return;
+
+            // Encontrar o primeiro slot vazio
+            const slots = document.querySelectorAll('.empty-slot');
+            for (let i = 0; i < slots.length; i++) {
+                if (!slots[i].classList.contains('filled')) {
+                    // Preencher o slot visualmente
+                    const img = slots[i].querySelector('img');
+                    img.src = imageSrc;
+                    slots[i].classList.add('filled');
+                    
+                    // Salvar referência do elemento da coleção para poder reativar depois
+                    slots[i].dataset.collectionIndex = Array.from(element.parentNode.children).indexOf(element);
+                    slots[i].dataset.elixir = elixirCost;
+
+                    // Marcar carta da coleção como usada
+                    element.classList.add('used');
+                    
+                    // Atualizar estatísticas
+                    cardsInDeck++;
+                    updateElixir();
+                    break;
+                }
+            }
+        }
+
+        function removeCard(slotIndex) {
+            const slots = document.querySelectorAll('.empty-slot');
+            const slot = slots[slotIndex];
+
+            if (slot.classList.contains('filled')) {
+                // Descobrir qual carta da coleção era essa
+                const collectionIndex = slot.dataset.collectionIndex;
+                const collectionCards = document.querySelectorAll('.collection-card');
+                
+                // Reativar a carta na coleção
+                if(collectionCards[collectionIndex]) {
+                    collectionCards[collectionIndex].classList.remove('used');
+                }
+
+                // Limpar o slot
+                slot.classList.remove('filled');
+                slot.querySelector('img').src = "";
+                
+                cardsInDeck--;
+                updateElixir();
+            }
+        }
+
+        function updateElixir() {
+            const filledSlots = document.querySelectorAll('.empty-slot.filled');
+            let totalElixir = 0;
+
+            filledSlots.forEach(slot => {
+                totalElixir += parseFloat(slot.dataset.elixir);
+            });
+
+            // Calcular média
+            let avg = 0;
+            if (filledSlots.length > 0) {
+                avg = (totalElixir / filledSlots.length).toFixed(1);
+            }
+
+            document.getElementById('avg-elixir').innerText = avg;
+        }
+
+        function resetDeck() {
+            // Limpar todos os slots
+            for(let i=0; i<8; i++) {
+                removeCard(i);
+            }
+            // Garantir que tudo zere (caso removeCard falhe por algum motivo)
+            document.querySelectorAll('.empty-slot').forEach(s => s.classList.remove('filled'));
+            document.querySelectorAll('.collection-card').forEach(c => c.classList.remove('used'));
+            cardsInDeck = 0;
+            updateElixir();
+        }
+    </script>
+
 </body>
 </html>

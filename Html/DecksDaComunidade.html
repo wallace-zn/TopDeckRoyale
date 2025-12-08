@@ -1,42 +1,116 @@
 <!DOCTYPE html>
-<html lang="pt-br"></html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>TopDeckRoyale-TDR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopDeckRoyale - Comunidade</title>
     <link rel="stylesheet" href="Style.css">
-  </head>
-  <body>
+    <script src="JavaScript.js" defer></script>
+</head>
+<body>
+
     <nav class="navbar">
-      <img src="./imgs/Gemini_Generated_Image_x68lohx68lohx68l.png" alt="Logo TopDeckRoyale" width="70">
-      <ul class="menu">
-  
-        <!-- ITEM PRINCIPAL (renomeado) -->
-        <li class="dropdown">
-          <a href="#">Início ▾</a>
-          <ul class="submenu">
-            <li><a href="Home.html">Home</a></li>
-            <li><a href="quemSomos.html">Quem Somos</a></li>
-            <li><a href="reclameAqui.html">Reclame Aqui</a></li>
-          </ul>
-        </li>
-  
-        <li class="dropdown">
-          <a href="#">Decks ▾</a>
-          <ul class="submenu">
-            <li><a href="decksMetas.html">Decks Meta</a></li>
-            <li><a href="monteSeuDeck.html">Monte Seu Deck</a></li>
-            <li><a href="DecksDaComunidade.html">Deck da Comunidade</a></li>
-          </ul>
-        </li>
-  
-        <li><a href="https://clashroyale.fandom.com/pt-br/wiki/P%C3%A1gina_principal">Wiki</a></li>
-  
-      </ul>
+        <img src="./imgs/Gemini_Generated_Image_x68lohx68lohx68l.png" alt="Logo TopDeckRoyale" width="70">
+        <ul class="menu">
+            <li class="dropdown">
+                <a href="#">Início ▾</a>
+                <ul class="submenu">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="quemSomos.html">Quem Somos</a></li>
+                    <li><a href="reclameAqui.html">Reclame Aqui</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Decks ▾</a>
+                <ul class="submenu">
+                    <li><a href="decksMetas.html">Decks Meta</a></li>
+                    <li><a href="monteSeuDeck.html">Monte Seu Deck</a></li>
+                    <li><a href="DecksDaComunidade.html">Deck da Comunidade</a></li>
+                </ul>
+            </li>
+            <li><a href="https://clashroyale.fandom.com/pt-br/wiki/P%C3%A1gina_principal">Wiki</a></li>
+        </ul>
     </nav>
-    <article>
-      <h1>Crie decks e veja os decks que a comunidade ja montou </h1>
-      <p>Seus decks</p>
-      <p>Crie novos decks</p>
-  </body>
-  
+
+    <header class="hero-community">
+        <h1>Decks da Comunidade</h1>
+        <p style="color: #ddd; margin-top: 10px; font-size: 1.2rem;">Descubra estratégias criadas por jogadores como você.</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="filter-bar">
+            <button class="filter-btn active">🔥 Em Alta</button>
+            <button class="filter-btn">🆕 Recentes</button>
+            <button class="filter-btn">🛡️ Defesa Absoluta</button>
+            <button class="filter-btn">⚔️ Ataque Rápido</button>
+        </div>
+
+        <div class="community-deck-card">
+            <div class="deck-header">
+                <h3>O Pesadelo do Golem</h3>
+                <span class="deck-tag">Beatdown</span>
+            </div>
+
+            <div class="deck-grid">
+                <a href="#" class="card-slot"><img src="./cards-150/golem.png"><div class="card-tooltip"><strong>Golem</strong>Elixir: 8</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/evos/BabyD.png"><div class="card-tooltip"><strong>Bebê Dragão</strong>Elixir: 4</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/night-witch.png"><div class="card-tooltip"><strong>Bruxa Sombria</strong>Elixir: 4</div></a>
+                <a href="#" class="card-slot info-left"><img src="./cards-150/evos/LumberjackCardEvolution.webp"><div class="card-tooltip"><strong>Lenhador</strong>Elixir: 4</div></a>
+                
+                <a href="#" class="card-slot"><img src="./cards-150/mega-minion.png"><div class="card-tooltip"><strong>Mega Servo</strong>Elixir: 3</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/tornado.png"><div class="card-tooltip"><strong>Tornado</strong>Elixir: 3</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/poison.png"><div class="card-tooltip"><strong>Veneno</strong>Elixir: 4</div></a>
+                <a href="#" class="card-slot info-left"><img src="./cards-150/evos/ZapCardEvolution.webp"><div class="card-tooltip"><strong>Zap</strong>Elixir: 2</div></a>
+            </div>
+
+            <div class="deck-footer">
+                <div class="author-info">
+                    <div class="avatar">J</div>
+                    <span>Criado por <strong>JoaoGamer_BR</strong></span>
+                </div>
+                <button class="like-btn">❤️ 1.2k Curtidas</button>
+            </div>
+        </div>
+
+        <div class="community-deck-card">
+            <div class="deck-header">
+                <h3>Defesa Impenetrável</h3>
+                <span class="deck-tag">Controle</span>
+            </div>
+
+            <div class="deck-grid">
+                <a href="#" class="card-slot"><img src="./cards-150/evos/knight-ev1.png"><div class="card-tooltip"><strong>Cavaleiro</strong>Elixir: 3</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/evos/archers-ev1.png"><div class="card-tooltip"><strong>Arqueiras</strong>Elixir: 3</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/tesla.png"><div class="card-tooltip"><strong>Tesla</strong>Elixir: 4</div></a>
+                <a href="#" class="card-slot info-left"><img src="./cards-150/ice-spirit.png"><div class="card-tooltip"><strong>Espirito de Gelo</strong>Elixir: 1</div></a>
+                
+                <a href="#" class="card-slot"><img src="./cards-150/x-bow.png"><div class="card-tooltip"><strong>X-Besta</strong>Elixir: 6</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/the-log.png"><div class="card-tooltip"><strong>Tronco</strong>Elixir: 2</div></a>
+                <a href="#" class="card-slot"><img src="./cards-150/fireball.png"><div class="card-tooltip"><strong>Bola de Fogo</strong>Elixir: 4</div></a>
+                <a href="#" class="card-slot info-left"><img src="./cards-150/ice-golem.png"><div class="card-tooltip"><strong>Golem de Gelo</strong>Elixir: 2</div></a>
+            </div>
+
+            <div class="deck-footer">
+                <div class="author-info">
+                    <div class="avatar">M</div>
+                    <span>Criado por <strong>Master_X</strong></span>
+                </div>
+                <button class="like-btn">❤️ 854 Curtidas</button>
+            </div>
+        </div>
+
+        <div class="create-deck-box">
+            <h2>Tem uma estratégia vencedora?</h2>
+            <p style="color: #aaa; margin-bottom: 20px;">Compartilhe seu deck com milhares de jogadores e receba votos da comunidade.</p>
+            <a href="monteSeuDeck.html" class="btn-hero" style="background-color: #9b59b6; box-shadow: 0 4px 0 #71368a;">+ Criar Meu Deck</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2025 TopDeckRoyale. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
 </html>
